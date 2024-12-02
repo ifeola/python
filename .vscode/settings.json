@@ -1,0 +1,13 @@
+{
+	"cSpell.language": "en,en-GB,en-US,lorem",
+	"editor.tabSize": 2,
+	"editor.tabFocusMode": false,
+	"editor.stickyTabStops": false,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"prettier.useTabs": true,
+	"pythonIndent.useTabOnHangingIndent": true,
+	"terminal.explorerKind": "external",
+	"terminal.integrated.cursorStyleInactive": "block",
+	"editor.fontFamily": "Cascadia Code",
+	"terminal.integrated.tabs.defaultColor": "terminal.ansiMagenta"
+}
