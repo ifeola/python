@@ -20,3 +20,14 @@ fruits = {
   "tangerine": 50,
   "watermelon": 80,
 }
+
+def main():
+  fruit = input("Item: ")
+  get_calories(fruit.lower())
+
+def get_calories(item):
+  for fruit in fruits:
+    if (fruit == item):
+      print(fruits[fruit])
+      
+main()
