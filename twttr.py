@@ -6,9 +6,8 @@ def main():
 def shorten(name):
     new_name = ""
     for n in name:
-        n = n.lower()
-        if(not(n == "a" or n == "e" or n == "i" or n == "o" or n == "u")):
+        if not n.lower() in ["a", "e", "i", "o", "u"]:
             new_name += n
-    print(new_name.capitalize())
+    print(new_name)
             
 main()
