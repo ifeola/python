@@ -23,7 +23,14 @@
 #   if (n.isnumeric()):
 #     print(name.index(n, len(name) - 1))
 
-names = "ab012"
-for name in range(len(names)):
-  if names[name].isdigit():
-    print(name)
+# names = "ab012"
+# for name in range(len(names)):
+#   if names[name].isdigit():
+#     print(name)
+
+number = 20.98
+numb = int(number)
+numb_two = str(number).split(".")
+if (int(numb_two[1][0]) > 5):
+  numb += 1
+  print(numb)

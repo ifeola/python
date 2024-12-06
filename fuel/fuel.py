@@ -1,8 +1,8 @@
 def main():
   gauge = get_gauge("Enter fraction: ")
-  if(gauge < 1):
+  if(gauge <= 1):
     print("E")
-  elif (gauge > 99):
+  elif (gauge >= 99):
     print("F")
   else:
     print(str(gauge)  + "%")
@@ -13,8 +13,16 @@ def get_gauge(fraction):
       gauge = (input(fraction)).split("/")
       x = int(gauge[0])
       y = int(gauge[1])
-      return int(x/y * 100)
-  
+      if not (x > y):
+        number = (x/y * 100)
+        numb_one = int(number)
+        numb_two = str(number).split(".")
+        if (int(numb_two[1][0]) > 5):
+          numb_one += 1
+        return numb_one
+      else:
+        continue
+        
     except ValueError:
       print("Either x or y is not an integer")
     except ZeroDivisionError:
