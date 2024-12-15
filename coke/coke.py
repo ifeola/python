@@ -335,3 +335,15 @@ main() """
 
 # main()
 
+
+
+names = {
+    0: "banana",
+    1: "apple",
+    2: "orange",
+    3: "orange"
+}
+
+fruit = "banana"
+for index in range(len(names)):
+    print(names.get(index))
