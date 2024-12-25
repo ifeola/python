@@ -1,21 +1,19 @@
-
 def main():
-  item = get_grocery("")
-  print(item)
+  get_grocery("")
   
 def get_grocery(item):
-  grocery = []
-  
+  groceries = {}
   while True:
     try:
-      grocery_item = input(item)
-      grocery.append(grocery_item)
-      continue
+        item = input("")
+        fruit = groceries.get(item)
+        if fruit is None:
+            groceries[item] = 1
+        else:
+            groceries[item] = groceries[item] + 1
+        groceries = dict(sorted(groceries.items()))
     except EOFError:
-      grocery = sorted(grocery)
-      for i in grocery:
-        
-        return grocery
-    
-  
+        for item in groceries:
+          print(f"{groceries[item]} {item.upper()}")
+        break
 main()

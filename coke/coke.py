@@ -335,15 +335,53 @@ main() """
 
 # main()
 
+months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+]
+
+# date = "9/8/1636"
+# date_formatted = date.split("/")
+# new_date = f"{date_formatted[2]}-{int(date_formatted[0]):02}-{int(date_formatted[1]):02}"
+# print(new_date)
+
+# date = "September 8, 1636"
+# date_formatted = date.split(" ")
+# date_day = date_formatted[1][0]
+
+# for month in months:
+#     if (date_formatted[0] == month):
+#         get_month_index = months.index(date_formatted[0]) + 1
+#         print(f"{date_formatted[2]}-{int(get_month_index):02}-{int(date_day):02}")
+
+# print(date_day)
 
 
-names = {
-    0: "banana",
-    1: "apple",
-    2: "orange",
-    3: "orange"
-}
 
-fruit = "banana"
-for index in range(len(names)):
-    print(names.get(index))
+
+
+def main():
+    print(print_date())
+    
+def print_date():
+    while True:
+        date = input("Date: ")
+        new_date = date.split("/")
+        if(int(new_date[0]) > 12 or int(new_date[1]) > 31 or len(new_date[2]) > 4):
+            continue
+        else:
+            date_formatted = date.split("/")
+            new_date = f"{date_formatted[2]}-{int(date_formatted[0]):02}-{int(date_formatted[1]):02}"
+            return new_date
+        
+main()
